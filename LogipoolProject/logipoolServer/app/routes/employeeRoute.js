@@ -1,0 +1,10 @@
+var express = require('express');
+var router = express.Router();
+var EmployeeController = require('../controllers/employeeController');
+// router.post('/login', InventoryController.login);
+router.post('/add', EmployeeController.addNewEmployee);
+router.get('/read', EmployeeController.getAllEmployee);
+router.get('/read/:id', EmployeeController.getEmployeeById);
+router.post('/update', EmployeeController.updateEmployeeById);
+router.put('/delete', EmployeeController.DeleteEmployeeById);
+module.exports = router;
